@@ -51,17 +51,21 @@
 	</div>
 	<div class="overly-home">
 		<div class="fake">
-			<i class="fa fa-heart" style="color: white;"></i> حضرتك تستاهلي اكتر من كل ده بكتير 
+			<i class="fa fa-heart" style="color: white;"></i> حضرتك تستاهلي اكتر من كل ده بكتير
 		</div>
 		<div class="container per">
-			<div class="cont-of-container" id="myContainer">
-				<H2>LES'S START
-					ARE U READYYY?
-					<audio id="myAudio" controls style="opacity: 0; width: 0;">
-						<source src="assets/audios/Are You Ready.mp3" type="audio/mp3" autoplay>
-					</audio>
-				</H2>
+			<div class="cont-of-container" id="myContainer" style="cursor: pointer;">
+				<h2>LET'S START ARE YOU READY?</h2>
 			</div>
+
+			<script>
+				document.getElementById('myContainer').addEventListener('click', playAudio);
+
+				function playAudio() {
+					var audio = new Audio('Are You Ready.mp3');
+					audio.play();
+				}
+			</script>
 			<br> <br> <br> <br> <br>
 			<div id="card">
 				<div id="card-inside">
@@ -72,7 +76,7 @@
 								<p> I and all the students in your class wish you a happy year and a more beautiful life
 									than you
 									could hope for. &nbsp;<i class="em-svg em-blush"></i></p>
-								<p>  You are a wonderful teacher and sister. Thank you for everything you have done
+								<p> You are a wonderful teacher and sister. Thank you for everything you have done
 									for our.idn
 									if you will like this simple celebration or no, but I'am very confident that you
 									will be happy.
@@ -80,14 +84,15 @@
 										💙.</span>
 								</p>
 					</div>
-					<audio id="party-song" controls style="opacity: 0; width: 0;">
-						<source src="assets/audios/birthday-song.mp3" type="audio/mp3" autoplay>
-					</audio>
+					<!-- <audio id="party-song" controls autoplay>
+						<source src="assets/audios/birthday-song.mp3" type="audio/mp3">
+					</audio> -->
 				</div>
 
 				<div id="card-front">
+
 					<div class="wrap">
-						<h1 class="animated infinite swing">Happy Birthday To U M.S SARAH </h1>
+						<h1 class="animated infinite swing" id="click-1" style="cursor: pointer;">Happy Birthday To U M.S SARAH </h1>
 						<div class="cake_and_velas">
 							<div class="velas">
 								<div class="fuego"></div>
@@ -160,6 +165,14 @@
 			</div>
 		</div>
 	</div>
+	<script>
+		document.getElementById('click-1').addEventListener('click', playAudio);
+
+		function playAudio() {
+			var audio = new Audio('birthday-song.mp3');
+			audio.play();
+		}
+	</script>
 
 </body>
 <script src="assets/js/main.js"></script>
