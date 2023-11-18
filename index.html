@@ -59,12 +59,14 @@
 			</div>
 
 			<script>
-				document.getElementById('myContainer').addEventListener('click', playAudio);
-
-				function playAudio() {
+				function playAudioOnce() {
 					var audio = new Audio('Are You Ready.mp3');
 					audio.play();
+					document.getElementById('myContainer').removeEventListener('mouseenter', playAudioOnce);
 				}
+
+				document.getElementById('myContainer').addEventListener('mouseenter', playAudioOnce);
+
 			</script>
 			<br> <br> <br> <br> <br>
 			<div id="card">
@@ -92,7 +94,8 @@
 				<div id="card-front">
 
 					<div class="wrap">
-						<h1 class="animated infinite swing" id="click-1" style="cursor: pointer;">Happy Birthday To U M.S SARAH </h1>
+						<h1 class="animated infinite swing" id="click-1" style="cursor: pointer;">Happy Birthday To U
+							M.S SARAH </h1>
 						<div class="cake_and_velas">
 							<div class="velas">
 								<div class="fuego"></div>
@@ -166,12 +169,14 @@
 		</div>
 	</div>
 	<script>
-		document.getElementById('click-1').addEventListener('click', playAudio);
-
-		function playAudio() {
+		function playAudioOnce() {
 			var audio = new Audio('birthday-song.mp3');
 			audio.play();
+			document.getElementById('card').removeEventListener('mouseenter', playAudioOnce);
 		}
+
+		document.getElementById('card').addEventListener('mouseenter', playAudioOnce);
+
 	</script>
 
 </body>
