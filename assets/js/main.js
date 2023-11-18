@@ -36,11 +36,6 @@ setTimeout(function () {
 }, 30000);
 
 setTimeout(function () {
-    var audio = document.getElementById('myAudio');
-    audio.play();
-}, 30000);
-
-setTimeout(function () {
     document.body.style.backgroundColor = '#ffff';
 }, 45000);
 
@@ -50,11 +45,16 @@ setTimeout(function () {
 }, 45000);
 
 setTimeout(function () {
-    var audio = document.getElementById('party-song');
-    audio.play();
-}, 45500);
-
-setTimeout(function () {
     var card = document.getElementById('card');
     card.style.display = 'block';
 }, 45500);
+
+document.getElementById('myContainer').addEventListener('click', playAudio);
+
+function playAudio() {
+    // Create an audio element
+    var audio = new Audio('Are You Ready.mp3'); // Assuming "hay.mp3" is in the same directory as your HTML file
+
+    // Play the audio
+    audio.play();
+}
