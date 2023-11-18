@@ -59,15 +59,20 @@
 			</div>
 
 			<script>
+				var audioPlayed = false;
+
 				function playAudioOnce() {
-					var audio = new Audio('Are You Ready.mp3');
-					audio.play();
-					document.getElementById('myContainer').removeEventListener('mouseenter', playAudioOnce);
+					if (!audioPlayed) {
+						var audio = new Audio('Are You Ready.mp3');
+						audio.play();
+						audioPlayed = true;
+					}
 				}
 
 				document.getElementById('myContainer').addEventListener('mouseenter', playAudioOnce);
 
 			</script>
+
 			<br> <br> <br> <br> <br>
 			<div id="card">
 				<div id="card-inside">
@@ -85,9 +90,6 @@
 										💙.</span>
 								</p>
 					</div>
-					<!-- <audio id="party-song" controls autoplay>
-						<source src="assets/audios/birthday-song.mp3" type="audio/mp3">
-					</audio> -->
 				</div>
 
 				<div id="card-front">
@@ -167,16 +169,21 @@
 			</div>
 		</div>
 	</div>
-	<script>
-		function playAudioOnce() {
-			var audio = new Audio('birthday-song.mp3');
-			audio.play();
-			document.getElementById('card').removeEventListener('mouseenter', playAudioOnce);
-		}
+<script>
+var audioPlayed = false;
 
-		document.getElementById('card').addEventListener('mouseenter', playAudioOnce);
+function playAudioOnce() {
+  if (!audioPlayed) {
+    var audio = new Audio('birthday-song.mp3'); // Replace with the actual name of your audio file
+    audio.play();
+    audioPlayed = true;
+  }
+}
 
-	</script>
+document.getElementById('myContainer').addEventListener('mouseenter', playAudioOnce);
+
+</script>
+
 
 </body>
 <script src="assets/js/main.js"></script>
