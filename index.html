@@ -57,22 +57,12 @@
 			<div class="cont-of-container" id="myContainer" style="cursor: pointer;">
 				<h2>LET'S START ARE YOU READY?</h2>
 			</div>
-
-			<script>
-document.getElementById('myContainer').addEventListener('click', playAudio);
-
-function playAudio() {
-  var audio = new Audio('Are You Ready.mp3'); // Replace with the actual name of your audio file
-  audio.play();
-}
-</script>
-
 			<br> <br> <br> <br> <br>
 			<div id="card">
 				<div id="card-inside">
 					<div class="wrap">
 						<center>
-							<p class="animated infinite wobble" id="name"><b><u>Happy Birthday M.S Sarah!</b></u></p>
+							<p class="animated infinite wobble"><b><u>Happy Birthday M.S Sarah!</b></u></p>
 							<center>
 								<p> I and all the students in your class wish you a happy year and a more beautiful life
 									than you
@@ -163,15 +153,22 @@ function playAudio() {
 			</div>
 		</div>
 	</div>
-<script>
-document.getElementById('click-1').addEventListener('click', playAudio);
+	<script>
+		document.getElementById('myContainer').addEventListener('click', playAudio);
 
-function playAudio() {
-  var audio = new Audio('birthday-song.mp3');
-  audio.play();
-}
-</script>
+		function playAudio() {
+			var audio = new Audio('Are You Ready.mp3'); // Replace with the actual name of your audio file
+			audio.play();
+		}
+	</script>
+	<script>
+		document.getElementById('click-1').addEventListener('click', playAudio);
 
+		function playAudio() {
+			var audio = new Audio('birthday-song.mp3'); // Replace with the actual name of your audio file
+			audio.play();
+		}
+	</script>
 
 </body>
 <script src="assets/js/main.js"></script>
